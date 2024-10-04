@@ -1,2 +1,3 @@
-# language-analysis-browser-extension
-Browser extension for web page language analysis
+# Language analysis browser extension
+
+Uses WXT + React as a starter.
