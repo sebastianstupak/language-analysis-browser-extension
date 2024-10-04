@@ -1,6 +1,19 @@
-import { defineConfig } from 'wxt';
+import { defineConfig } from "wxt";
 
-// See https://wxt.dev/api/config.html
 export default defineConfig({
-  modules: ['@wxt-dev/module-react'],
+  modules: ["@wxt-dev/module-react"],
+  manifest: {
+    description: "Analyzes and highlights text based on language difficulty",
+    permissions: ["activeTab", "storage"],
+    host_permissions: ["<all_urls>"],
+  },
+  vite: () => ({
+    build: {
+      rollupOptions: {
+        input: {
+          "english-word-rankings": "assets/word-ranking/en.json",
+        },
+      },
+    },
+  }),
 });
