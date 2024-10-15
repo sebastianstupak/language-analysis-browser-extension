@@ -6,6 +6,9 @@ export default defineConfig({
     description: "Analyzes and highlights text based on language difficulty",
     permissions: ["activeTab", "storage"],
     host_permissions: ["<all_urls>"],
+    background: {
+      service_worker: 'entrypoints/background.ts',
+    },
   },
   vite: () => ({
     build: {
